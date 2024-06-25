@@ -58,7 +58,7 @@ alias dstart="cd $HOME/Developer/" # shortcut to start development and go to the
 alias aconf="code /usr/local/etc/httpd/httpd.conf" # edit the default apache server running on macOS.
 alias lzd='lazydocker'
 alias isync="~/Developer/Git/icloud_sync/icloud_sync.sh"
-alias csync=" if [ -d $HOME/.dotfiles ]; then ~/.dotfiles/config.sh; else echo \"not configured\" fi" # setting up the configuration on the system
+alias csync="if [ -d $HOME/.dotfiles ]; then ~/.dotfiles/config.sh; else echo \"not configured\"; fi" # setting up the configuration on the system
 #======================================================================
 # 🐍 tensorflow-metal support only through conda
 #======================================================================
