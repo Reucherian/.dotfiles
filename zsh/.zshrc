@@ -46,28 +46,19 @@ export HDF5_DIR="/opt/homebrew/Cellar/hdf5/1.12.1_1/"
 #======================================================================
 alias python='python3'
 # the below lines will be used to take care of the finder showFiles and hideFiles commands to show and hidefiles respectively.
-alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
-# the below line is an apple script that will open the pages application to the particular
-function pages(){ osascript -e 'on run argv' -e 'set current_path to POSIX file ((POSIX path of item 1 of argv) & "/"&(item 2 of argv)&".pages") as string' -e 'tell application "Pages" to save (make new document) in file  current_path' -e 'end run' "$PWD" "$1";};
-alias pages="pages"
-# easily edit the zshrc file
-alias zshconfig="code ~/.zshrc"
-# show the metalhud in games
-alias showMetalhud="/bin/launchctl setenv MTL_HUD_ENABLED 1"
-# hide the metalhud in games
-alias hideMetalhud="/bin/launchctl setenv MTL_HUD_ENABLED 0"
-# resets the view settings for all the files and folders in the current directory
-alias viewclean="find . -name .DS_Store -delete"
-# shows istats data continuously with 10 second intervals
-alias istats_con="while :;do;istats all;sleep 10;clear;done;"
-# shortcut to start development and go to the developer folder
-alias dev_start="cd /Users/Reuben/Developer/"
-# Edit the default apache server running on macOS.
-alias apacheconf="code /usr/local/etc/httpd/httpd.conf"
+function pages(){ osascript -e 'on run argv' -e 'set current_path to POSIX file ((POSIX path of item 1 of argv) & "/"&(item 2 of argv)&".pages") as string' -e 'tell application "Pages" to save (make new document) in file  current_path' -e 'end run' "$PWD" "$1";}; # apple script to open a pages file in the current path
+# alias pages="pages"
+alias sfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
+alias hfiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias zconf="code ~/.zshrc" # easily edit the zshrc file
+alias smhud="/bin/launchctl setenv MTL_HUD_ENABLED 1" # show the metalhud in games
+alias hmhud="/bin/launchctl setenv MTL_HUD_ENABLED 0" # hide the metalhud in games
+alias vclean="find . -name .DS_Store -delete" # resets the view settings for all the files and folders in the current directory
+alias dstart="cd $HOME/Developer/" # shortcut to start development and go to the developer folder
+alias aconf="code /usr/local/etc/httpd/httpd.conf" # edit the default apache server running on macOS.
 alias lzd='lazydocker'
-alias icloud_sync="~/Developer/Git/icloud_sync/icloud_sync.sh"
-
+alias isync="~/Developer/Git/icloud_sync/icloud_sync.sh"
+alias csync=" if [ -d $HOME/.dotfiles ]; then ~/.dotfiles/config.sh" # setting up the configuration on the system
 #======================================================================
 # 🐍 tensorflow-metal support only through conda
 #======================================================================
