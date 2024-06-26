@@ -44,12 +44,9 @@ export HDF5_DIR="/opt/homebrew/Cellar/hdf5/1.12.1_1/"
 #======================================================================
 # 📇 useful aliases
 #======================================================================
-alias python='python3'
-# the below lines will be used to take care of the finder showFiles and hideFiles commands to show and hidefiles respectively.
-function pages(){ osascript -e 'on run argv' -e 'set current_path to POSIX file ((POSIX path of item 1 of argv) & "/"&(item 2 of argv)&".pages") as string' -e 'tell application "Pages" to save (make new document) in file  current_path' -e 'end run' "$PWD" "$1";}; # apple script to open a pages file in the current path
-# alias pages="pages"
-alias sfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
-alias hfiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
+alias python='python3' # default python to be used is python3
+alias sfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app' # show all hidden files in finder
+alias hfiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app' # hide all hidden files in finder
 alias zconf="code ~/.zshrc" # easily edit the zshrc file
 alias smhud="/bin/launchctl setenv MTL_HUD_ENABLED 1" # show the metalhud in games
 alias hmhud="/bin/launchctl setenv MTL_HUD_ENABLED 0" # hide the metalhud in games
@@ -59,6 +56,7 @@ alias aconf="code /usr/local/etc/httpd/httpd.conf" # edit the default apache ser
 alias lzd='lazydocker'
 alias isync="~/Developer/Git/icloud_sync/icloud_sync.sh"
 alias csync="if [ -d $HOME/.dotfiles ]; then ~/.dotfiles/config.sh; else echo \"not configured\"; fi" # setting up the configuration on the system
+function pages(){ osascript -e 'on run argv' -e 'set current_path to POSIX file ((POSIX path of item 1 of argv) & "/"&(item 2 of argv)&".pages") as string' -e 'tell application "Pages" to save (make new document) in file  current_path' -e 'end run' "$PWD" "$1";}; # apple script to open a pages file in the current path
 #======================================================================
 # 🐍 tensorflow-metal support only through conda
 #======================================================================
