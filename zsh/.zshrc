@@ -6,6 +6,7 @@ alias izsh="arch -x86_64 zsh" # change architecture of shell to x86
 alias ibrew='arch -x86_64 /usr/local/bin/brew'
 alias python='python3' # default python to be used is python3
 alias sfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app' # show all hidden files in finder
+alias vim='nvim' # making neovim the default editor
 alias hfiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app' # hide all hidden files in finder
 alias zconf="code ~/.zshrc" # easily edit the zshrc file
 alias smhud="/bin/launchctl setenv MTL_HUD_ENABLED 1" # show the metalhud in games
