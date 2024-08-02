@@ -1,5 +1,4 @@
 PROMPT='%{%F{white}%B%}%n%{%f%b%}@%{%F{blue}%B%}%m%{%f%b%} %1~ %# ' # 🌈 prompt customization
-eval "$(starship init zsh)" # for 🚀 starship
 eval "$(/opt/homebrew/bin/brew shellenv)" # required for 🍺 brew
 alias mzsh="arch -arm64 zsh" # change architecture of shell to arm
 alias izsh="arch -x86_64 zsh" # change architecture of shell to x86
@@ -27,3 +26,4 @@ export GOPATH="$HOME/.go" # add gopath variable
 export PATH="$HOME/.go/bin:$PATH" # add go to path
 export GOROOT="/opt/homebrew/opt/go/libexec" # add go root variable
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH" # add postgre to the path
+eval "$(starship init zsh)" # for 🚀 starship
