@@ -5,6 +5,7 @@ if [ -d $HOME/.dotfiles ]; then
     stow starship
     stow tmux
     stow wezterm
+    stow nvim
 else
     echo "$HOME/.dotfiles does not exist.\n clone to the home folder instead"
 fi
