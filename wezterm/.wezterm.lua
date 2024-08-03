@@ -5,8 +5,8 @@ return {
 	font_size = 14.0,
 	font = wezterm.font("MonaspiceNe Nerd Font", {weight="Medium", stretch="Normal", style="Normal"}),
 	harfbuzz_features = {"calt", "ss01", "ss02", "ss03", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "liga" }, -- enabling all the ligatures and fonts that wezterm will use
-	macos_window_background_blur = 30, -- macos background blur
-	window_background_opacity = 0.95, -- window opacity
+	-- macos_window_background_blur = 30, -- macos background blur
+	-- window_background_opacity = 0.95, -- window opacity
 	window_decorations = 'RESIZE', -- removes the window title bar and allows resize
 	keys = { -- keybinding modifiers
 		{ key = 'f', mods = 'CTRL',action = wezterm.action.ToggleFullScreen }, -- might remove
