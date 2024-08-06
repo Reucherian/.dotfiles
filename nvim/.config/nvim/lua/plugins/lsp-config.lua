@@ -16,9 +16,14 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
+		  local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local nvim_lsp = require("lspconfig")
-			nvim_lsp.lua_ls.setup({})
-			nvim_lsp.tsserver.setup({})
+			nvim_lsp.lua_ls.setup({
+        capabilities = capabilities
+      })
+			nvim_lsp.tsserver.setup({
+        capabilities = capabilities
+      })
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function()
 					vim.keymap.set("n", "grn", vim.lsp.buf.rename)
