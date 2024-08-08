@@ -9,21 +9,21 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "pyright" },
+				ensure_installed = { "lua_ls", "tsserver", "pyright", "gopls" },
 			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-		  local capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local nvim_lsp = require("lspconfig")
 			nvim_lsp.lua_ls.setup({
-        capabilities = capabilities
-      })
+				capabilities = capabilities,
+			})
 			nvim_lsp.tsserver.setup({
-        capabilities = capabilities
-      })
+				capabilities = capabilities,
+			})
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function()
 					vim.keymap.set("n", "grn", vim.lsp.buf.rename)
