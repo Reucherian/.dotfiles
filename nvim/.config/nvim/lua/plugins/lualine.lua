@@ -8,7 +8,7 @@ return {
 				component_separators = "|",
 				section_separators = "",
 			},
-			extensions = { "neo-tree", "lazy" },
+			extensions = { "neo-tree", "lazy", "mason" },
 			sections = {
 				lualine_a = {
 					{
