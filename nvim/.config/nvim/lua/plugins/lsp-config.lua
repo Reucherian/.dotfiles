@@ -24,6 +24,9 @@ return {
 			nvim_lsp.tsserver.setup({
 				capabilities = capabilities,
 			})
+			nvim_lsp.gopls.setup({
+				capabilities = capabilities,
+			})
 			vim.api.nvim_create_autocmd("LspAttach", {
 				callback = function()
 					vim.keymap.set("n", "grn", vim.lsp.buf.rename)
