@@ -1,13 +1,6 @@
 local wezterm = require("wezterm")
-local tmux = {}
-if wezterm.target_triple == "aarch64-apple-darwin" then
-  tmux = { "/opt/homebrew/bin/tmux", "new", "-As0" }
-else
-  tmux = { "tmux", "new", "-As0" }
-end
 return {
   color_scheme = "Catppuccin Mocha",
-  default_prog = tmux,
   enable_tab_bar = false,
   font_size = 14.0,
   font = wezterm.font("MonaspiceNe Nerd Font", { weight = "Medium", stretch = "Normal", style = "Normal" }),
