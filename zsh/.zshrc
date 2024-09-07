@@ -1,4 +1,12 @@
 PROMPT='%{%F{white}%B%}%n%{%f%b%}@%{%F{blue}%B%}%m%{%f%b%} %1~ %# ' # 🌈 prompt customization
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git" # using zinit as a plugin manager
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
+zinit ice as"command" from"gh-r" \
+          atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" \
+          atpull"%atclone" src"init.zsh" # installing starship using zinit
+zinit light starship/starship
 eval "$(/opt/homebrew/bin/brew shellenv)" # required for 🍺 brew
 alias mzsh="arch -arm64 zsh" # change architecture of shell to arm
 alias izsh="arch -x86_64 zsh" # change architecture of shell to x86
@@ -24,6 +32,7 @@ export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH" # add java to path
 export JAVA_HOME="/opt/homebrew/opt/openjdk@11" # add java home variable
 export GOPATH="$HOME/.go" # add gopath variable
 export PATH="$HOME/.go/bin:$PATH" # add go to path
-export GOROOT="/opt/homebrew/opt/go/libexec" # add go root variable
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH" # add postgre to the path
+export GOROOT="${pkgs.go}/share/go" # adding nix go root
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH" # add postgres to the path
+export PATH="/Users/rcherian/.cargo/bin:$PATH" # add programs installed through rust cargo
 eval "$(starship init zsh)" # for 🚀 starship
