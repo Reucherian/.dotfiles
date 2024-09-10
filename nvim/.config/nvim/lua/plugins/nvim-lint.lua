@@ -1,21 +1,21 @@
 return {
-	"mfussenegger/nvim-lint",
+  "mfussenegger/nvim-lint",
   event = {
     "BufReadPre",
     "BufNewFile",
   },
-	config = function()
+  config = function()
     local lint = require("lint")
-		lint.linters_by_ft = {
-			python = { "pylint" },
-			yaml = { "ansible_lint" },
-		}
+    lint.linters_by_ft = {
+      python = { "pylint" },
+      yaml = { "ansible_lint" },
+    }
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-		vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "InsertLeave" }, {
+    vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "InsertLeave" }, {
       group = lint_augroup,
-			callback = function()
-				lint.try_lint()
-			end,
-		})
-	end,
+      callback = function()
+        lint.try_lint()
+      end,
+    })
+  end,
 }

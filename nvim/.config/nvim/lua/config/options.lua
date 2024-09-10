@@ -1,18 +1,18 @@
-vim.cmd("set expandtab") -- using spaces instead of tabs
-vim.cmd("set tabstop=2") -- using 2 spaces for tabs
+vim.cmd("set expandtab")    -- using spaces instead of tabs
+vim.cmd("set tabstop=2")    -- using 2 spaces for tabs
 vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2") -- using the same for indentation
-vim.g.mapleader = " " -- using the space key for leader
-vim.g.maplocalleader = " " -- using the space key for local leader
-vim.o.hlsearch = true -- Set highlight on search
-vim.wo.number = true -- Make line numbers default
+vim.g.mapleader = " "       -- using the space key for leader
+vim.g.maplocalleader = " "  -- using the space key for local leader
+vim.o.hlsearch = true       -- Set highlight on search
+vim.wo.number = true        -- Make line numbers default
 vim.o.relativenumber = true
-vim.o.mouse = "" -- Disable mouse mode
-vim.o.breakindent = true -- Enable break indent
-vim.o.undofile = true -- Save undo history
-vim.o.ignorecase = true -- Case insensitive searching UNLESS /C or capital in search
+vim.o.mouse = ""            -- Disable mouse mode
+vim.o.breakindent = true    -- Enable break indent
+vim.o.undofile = true       -- Save undo history
+vim.o.ignorecase = true     -- Case insensitive searching UNLESS /C or capital in search
 vim.o.smartcase = true
-vim.o.updatetime = 250 -- Decrease update time
+vim.o.updatetime = 250      -- Decrease update time
 vim.wo.signcolumn = "yes"
 vim.opt.clipboard = "unnamedplus"
 vim.o.completeopt = "menuone,noselect" -- Set completeopt to have a better completion experience
