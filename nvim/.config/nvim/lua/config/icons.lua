@@ -10,6 +10,6 @@ vim.diagnostic.config({
   signs = {
     text = signs_text,
     numhl = signs_numhl,
-    texthl = signs_numhl
+    linehl = signs_numhl
   }
 })

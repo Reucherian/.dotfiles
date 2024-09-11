@@ -9,8 +9,11 @@ return {
   config = function()
     local neotree = require("neo-tree")
     neotree.setup({
-      popup_border_style = "rounded",
-      async_directory_scan = "auto"
+      filesystem = {
+        bind_to_cwd = false,
+        follow_current_file = { enabled = true },
+        use_libuv_file_watcher = true,
+      },
     })
     vim.keymap.set("n", "<C-n>", ":Neotree filesystem reveal right<CR>")
   end,
