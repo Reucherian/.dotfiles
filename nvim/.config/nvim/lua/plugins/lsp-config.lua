@@ -23,7 +23,7 @@ return {
       nvim_lsp.lua_ls.setup({
         capabilities = capabilities,
       })
-      nvim_lsp.tsserver.setup({
+      nvim_lsp.ts_ls.setup({
         capabilities = capabilities,
       })
       nvim_lsp.gopls.setup({
