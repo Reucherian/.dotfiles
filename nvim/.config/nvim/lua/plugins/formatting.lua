@@ -20,6 +20,6 @@ return {
         async = false,
         timeout_ms = 500
       })
-    end, { desc = "Format file or range" })
+    end, { desc = "format file or range using conform" })
   end
 }

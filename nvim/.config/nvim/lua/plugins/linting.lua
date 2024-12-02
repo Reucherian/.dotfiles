@@ -8,10 +8,9 @@ return {
     local lint = require("lint")
     lint.linters_by_ft = {
       python = { "pylint" },
-      yaml = { "ansible_lint" },
     }
     local lint_augroup = vim.api.nvim_create_augroup("lint", { clear = true })
-    vim.api.nvim_create_autocmd({ "BufWritePost", "BufEnter", "InsertLeave" }, {
+    vim.api.nvim_create_autocmd({ "BufWritePost", "BufReadPost", "InsertLeave" }, {
       group = lint_augroup,
       callback = function()
         lint.try_lint()
