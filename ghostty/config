@@ -1,0 +1,12 @@
+shell-integration-features = no-cursor
+theme = catppuccin-mocha
+font-size = 14
+font-family = "MonaspiceNe Nerd Font"
+font-style = Medium
+cursor-style = block
+mouse-hide-while-typing = true
+adjust-cell-width = -5%
+macos-titlebar-style = tabs
+# keybindings are added below
+# to clear scrollback from view
+keybind = super+k=text:\x0c
