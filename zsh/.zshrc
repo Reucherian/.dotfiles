@@ -33,7 +33,7 @@ export JAVA_HOME="/opt/homebrew/opt/openjdk@11" # add java home variable
 export GOPATH="$HOME/.go" # add gopath variable
 export PATH="$HOME/.go/bin:$PATH" # add go to path
 export GOTOOLCHAIN=local
-export PATH="/Users/rcherian/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH" # add postgres to the path
-export PATH="/Users/rcherian/.cargo/bin:$PATH" # add programs installed through rust cargo
+export PATH="$HOME/.cargo/bin:$PATH" # add programs installed through rust cargo
 eval "$(starship init zsh)" # for 🚀 starship
