@@ -8,8 +8,8 @@
 	<string>com.reuben.kmonad</string>
 	<key>ProgramArguments</key>
 	<array>
-      <string>/Users/rcherian/.local/bin/kmonad</string>
-      <string>/Users/rcherian/.config/kmonad/config.kbd</string>
+      <string>/Users/Reuben/.local/bin/kmonad</string>
+      <string>/Users/Reuben/.config/kmonad/config.kbd</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
