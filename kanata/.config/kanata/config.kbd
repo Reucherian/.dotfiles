@@ -1,0 +1,28 @@
+;; defsrc is still necessary
+(defcfg
+  process-unmapped-keys yes
+)
+
+(defsrc
+  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
+  caps ret
+  fn
+)
+
+(defalias
+  escctrl (tap-hold-press 200 200 esc lctl)
+  retctrl (tap-hold-press 200 200 ret lctl)
+  fnl (tap-hold-press 200 200 fn (layer-toggle fn))
+)
+
+(deflayer base
+  brdn  brup  _    _    _    _   prev  pp  next  mute  vold  volu
+  @escctrl @retctrl
+  @fnl
+)
+
+(deflayer fn
+  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
+  @escctrl @retctrl
+  fn
+)
