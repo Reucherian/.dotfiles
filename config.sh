@@ -6,7 +6,7 @@ if [ -d $HOME/.dotfiles ]; then
     stow tmux
     stow ghostty
     stow nvim
-    stow kmonad
+    stow kanata
 else
     echo "$HOME/.dotfiles does not exist.\n clone to the home folder instead"
 fi
