@@ -1,19 +1,21 @@
 return {
   {
     "williamboman/mason.nvim",
-    config = function()
-      require("mason").setup({
-        PATH = "append"
-      })
-    end,
+    opts = {
+      PATH = "append",
+    },
   },
   {
     "williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = { "lua_ls", "ts_ls", "pyright", "gopls", "ansiblels" },
-      })
-    end,
+    opts = {
+      ensure_installed = {
+        "lua_ls",
+        "ts_ls",
+        "pyright",
+        "gopls",
+        "ansiblels"
+      },
+    },
   },
   {
     "neovim/nvim-lspconfig",
