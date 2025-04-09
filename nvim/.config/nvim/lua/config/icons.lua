@@ -7,6 +7,7 @@ for type, icon in pairs(signs) do
   table.insert(signs_numhl, vim.diagnostic.severity[string.upper(type)], type .. "Msg")
 end
 vim.diagnostic.config({
+  virtual_text = true,
   signs = {
     text = signs_text,
     numhl = signs_numhl,
