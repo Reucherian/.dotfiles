@@ -32,17 +32,15 @@ return {
       { "saghen/blink.cmp" }
     },
     config = function()
+      -- adding completion capabilites to every lsp
       local capabilities = require("blink.cmp").get_lsp_capabilities()
       local nvim_lsp = require("lspconfig")
-      nvim_lsp.lua_ls.setup({
-        capabilities = capabilities,
-      })
-      nvim_lsp.ts_ls.setup({
-        capabilities = capabilities,
-      })
-      nvim_lsp.gopls.setup({
-        capabilities = capabilities,
-      })
+      local language_servers = { 'lua_ls', 'ts_ls', 'gopls' }
+      for _, ls in ipairs(language_servers) do
+        nvim_lsp[ls].setup({
+          capabilities = capabilities,
+        })
+      end
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function()
           vim.keymap.set("n", "grn", vim.lsp.buf.rename)
