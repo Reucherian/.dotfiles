@@ -1,4 +1,3 @@
----@class util.ui
 local M = {}
 
 function M.foldexpr()
