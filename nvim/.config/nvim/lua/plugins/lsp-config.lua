@@ -39,7 +39,7 @@ return {
       -- adding completion capabilites to every lsp
       local capabilities = require("blink.cmp").get_lsp_capabilities()
       local nvim_lsp = require("lspconfig")
-      local language_servers = { 'lua_ls', 'ts_ls', 'gopls' }
+      local language_servers = { 'pyright', 'ansiblels', 'lua_ls', 'ts_ls', 'gopls' }
       for _, ls in ipairs(language_servers) do
         nvim_lsp[ls].setup({
           capabilities = capabilities,
