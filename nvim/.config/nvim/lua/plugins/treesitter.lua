@@ -47,7 +47,6 @@ return {
       "vimdoc",
       "xml",
       "yaml",
-      "yaml.ansible"
     },
     incremental_selection = {
       enable = true,
