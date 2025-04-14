@@ -11,7 +11,6 @@ return {
     words = { enabled = true },
   },
   -- stylua: ignore
-  ---@diagnostic disable:undefined-global
   keys = {
     {
       "<leader>n",
