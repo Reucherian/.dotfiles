@@ -6,7 +6,13 @@ return {
     notifier = { enabled = true },
     scope = { enabled = true },
     scroll = { enabled = true },
-    statuscolumn = { enabled = false }, -- we set this in options.lua
+    statuscolumn = { -- we set this in options.lua
+      enabled = false,
+      folds = {
+        open = true,
+        git_hl = true,
+      },
+    },
     toggle = { map = vim.keymap.set },
     words = { enabled = true },
   },
