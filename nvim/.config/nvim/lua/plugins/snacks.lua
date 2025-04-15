@@ -5,7 +5,7 @@ return {
     input = { enabled = true },
     notifier = { enabled = true },
     scope = { enabled = true },
-    scroll = { enabled = true },
+    scroll = { enabled = false },
     statuscolumn = { -- we set this in options.lua
       enabled = false,
       folds = {
