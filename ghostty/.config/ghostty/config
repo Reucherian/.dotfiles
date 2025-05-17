@@ -17,3 +17,4 @@ macos-icon = custom-style
 macos-icon-ghost-color = #FFFFFF
 macos-icon-screen-color = #000000
 copy-on-select = clipboard
+font-feature = "ss01,ss02,ss03,ss04,ss05,ss06,ss07,ss08,ss09,ss10,liga"
