@@ -71,10 +71,11 @@ return {
       vim.diagnostic.config(vim.deepcopy(diagnostics))
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function()
-          vim.keymap.set("n", "grn", vim.lsp.buf.rename)
-          vim.keymap.set("n", "gra", vim.lsp.buf.code_action)
-          vim.keymap.set("n", "grr", vim.lsp.buf.references)
-          vim.keymap.set("i", "<C-s>", vim.lsp.buf.signature_help)
+          vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename)
+          vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
+          vim.keymap.set("n", "gr", vim.lsp.buf.references)
+          vim.keymap.set("n", "gK", vim.lsp.buf.signature_help)
+          vim.keymap.set("i", "<c-k>", vim.lsp.buf.signature_help)
         end,
       })
     end,
