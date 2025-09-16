@@ -1,11 +1,10 @@
 shell-integration-features = no-cursor
-theme = catppuccin-mocha
+theme = catppuccin-mocha.conf
 font-size = 14
-font-family = "MonaspiceNe Nerd Font"
-font-style = Medium
+font-family = "Monaspace Neon"
+font-style = SemiBold
 cursor-style = block
 mouse-hide-while-typing = true
-adjust-cell-width = -5%
 macos-titlebar-style = tabs
 # extra padding for tmux bar
 window-padding-x = 5
@@ -13,8 +12,5 @@ window-padding-y = 10,0
 # keybindings are added below
 # to clear scrollback from view
 keybind = super+k=text:\x0c
-macos-icon = custom-style
-macos-icon-ghost-color = #FFFFFF
-macos-icon-screen-color = #000000
 copy-on-select = clipboard
 font-feature = "ss01,ss02,ss03,ss04,ss05,ss06,ss07,ss08,ss09,ss10,liga"
