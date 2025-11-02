@@ -10,7 +10,8 @@ zinit light starship/starship
 zinit light zdharma-continuum/fast-syntax-highlighting # installing the fast syntax highlighting feature
 zinit light zsh-users/zsh-autosuggestions # install the auto suggestions feature
 eval "$(/opt/homebrew/bin/brew shellenv)" # required for 🍺 brew
-alias python='python3' # default python to be used is python3
+alias python='python3' # default python to be used is python3 (ensure using brew python)
+alias pip='pip3' # default pip to be used is pip3 (ensure using brew pip)
 alias sfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app' # show all hidden files in finder
 alias vim='nvim' # making neovim the default editor
 alias hfiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app' # hide all hidden files in finder
@@ -25,14 +26,13 @@ alias csync="if [ -d $HOME/.dotfiles ]; then ~/.dotfiles/config.sh; else echo \"
 alias fhide="SetFile -a V" # makes a file hidden
 function pages(){ osascript -e 'on run argv' -e 'set current_path to POSIX file ((POSIX path of item 1 of argv) & "/"&(item 2 of argv)&".pages") as string' -e 'tell application "Pages" to save (make new document) in file  current_path' -e 'end run' "$PWD" "$1";}; # apple script to open a pages file in the current path
 export XDG_CONFIG_HOME="$HOME/.config"
-export HDF5_DIR="/opt/homebrew/Cellar/hdf5/1.12.1_1/" # required for tensorflow-macos
-export PATH="/opt/homebrew/opt/openjdk@11/bin:$PATH" # add java to path
-export JAVA_HOME="/opt/homebrew/opt/openjdk@11" # add java home variable
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH" # add java to path
+export JAVA_HOME="/opt/homebrew/opt/openjdk" # add java home variable
 export GOPATH="$HOME/.go" # add gopath variable
 export PATH="$HOME/.go/bin:$PATH" # add go to path
 export GOTOOLCHAIN=local
 export PATH="$HOME/.local/bin:$PATH"
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH" # add postgres to the path
+export PATH="/opt/homebrew/opt/postgresql@18/bin:$PATH" # add postgres to the path
 export PATH="$HOME/.cargo/bin:$PATH" # add programs installed through rust cargo
 export EDITOR="nvim" # setting default edit to neovim
 eval "$(starship init zsh)" # for 🚀 starship
