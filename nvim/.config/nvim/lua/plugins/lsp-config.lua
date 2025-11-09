@@ -40,15 +40,6 @@ return {
     config = function()
       -- TODO: add inlay hints and codelens
 
-      -- adding completion capabilites to every lsp
-      local capabilities = require("blink.cmp").get_lsp_capabilities()
-      local nvim_lsp = require("lspconfig")
-      local language_servers = { 'html', 'cssls', 'emmet_ls', 'pyright', 'ansiblels', 'lua_ls', 'ts_ls', 'gopls' }
-      for _, ls in ipairs(language_servers) do
-        nvim_lsp[ls].setup({
-          capabilities = capabilities,
-        })
-      end
       local icons = require('config.icons')
       local diagnostics = {
         underline = true,
