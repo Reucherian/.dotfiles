@@ -13,6 +13,7 @@ return {
         background = "transparent",
         theme = "dark",
         scale = 1,
+        cli_args = { "--iconPacks", "@iconify-json/logos" }
       }
     },
   },
