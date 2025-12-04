@@ -2,6 +2,7 @@ if [ -d $HOME/.dotfiles ]; then
     cd $HOME/.dotfiles
     git pull
     stow zsh
+    stow git
     stow starship
     stow tmux
     stow ghostty
