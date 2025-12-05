@@ -101,15 +101,27 @@ return {
 				},
 			}
 			local ensure_installed = vim.tbl_keys(servers or {})
-			vim.list_extend(
-				ensure_installed,
-				{ "stylua", "html", "cssls", "emmet_ls", "ts_ls", "pyright", "gopls", "ansiblels", "tailwindcss" }
-			)
+			vim.list_extend(ensure_installed, {
+				"stylua",
+				"html",
+				"cssls",
+				"emmet_ls",
+				"vtsls",
+				"pyright",
+				"ruff",
+				"gopls",
+				"ansiblels",
+				"tailwindcss",
+			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 			require("mason-lspconfig").setup({
 				ensure_installed = {}, -- explicitly set so as to use only mason-tool-installer
 				automatic_installation = false,
 			})
+			-- set the server configurations
+			for name, config in pairs(servers) do
+				vim.lsp.config(name, config)
+			end
 		end,
 	},
 }
