@@ -10,6 +10,7 @@ if [ -d $HOME/.dotfiles ]; then
     stow kanata
     stow btop
     stow maven
+    stow bat
 else
     echo "$HOME/.dotfiles does not exist.\n clone to the home folder instead"
 fi
