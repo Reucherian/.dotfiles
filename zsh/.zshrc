@@ -34,6 +34,8 @@ export EDITOR="nvim" # setting default edit to neovim
 export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH" # add java to path
 export JAVA_HOME="/opt/homebrew/opt/openjdk" # add java home variable
+export M2_REPO="$XDG_DATA_HOME/maven/repository" # changing mavens repo location
+export MAVEN_OPTS="-Dmaven.repo.local=$M2_REPO" # ensure that plugins use the new repo location
 export GOPATH="$XDG_DATA_HOME/.go" # add gopath variable
 export GOCACHE="$XDG_CACHE_HOME/go-build"
 export PATH="$GOPATH/bin:$PATH" # add go to path
@@ -53,7 +55,7 @@ export PYTHONHISTFILE="$XDG_STATE_HOME/python_history"
 export PATH="$HOME/.cargo/bin:$PATH" # add programs installed through rust cargo
 eval "$(starship init zsh)" # for 🚀 starship
 export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_repl_history"
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="$XDG_DATA_HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 bindkey -e # setting the EDITOR variable enables zsh viin mode in tmux
