@@ -18,17 +18,17 @@ return {
 						mode = mode or "n"
 						vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP " .. desc })
 					end
-					local telescope = require("telescope.builtin")
+					-- local telescope = require("telescope.builtin")
 					-- renames the variable usually works across buffers
-					map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
-					map("gra", vim.lsp.buf.code_action, "[G]oto Code [A]ction", { "n", "x" })
-					map("grr", telescope.lsp_references, "[G]oto [R]eferences")
-					map("gri", telescope.lsp_implementations, "[G]oto [I]mplementation")
-					map("grd", telescope.lsp_definitions, "[G]oto [D]efinition")
-					map("grD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-					map("gO", telescope.lsp_document_symbols, "Open Document Symbols")
-					map("gW", telescope.lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
-					map("grt", telescope.lsp_type_definitions, "[G]oto [T]ype Definition")
+					-- map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
+					-- map("gra", vim.lsp.buf.code_action, "[G]oto Code [A]ction", { "n", "x" })
+					-- map("grr", telescope.lsp_references, "[G]oto [R]eferences")
+					-- map("gri", telescope.lsp_implementations, "[G]oto [I]mplementation")
+					-- map("grd", telescope.lsp_definitions, "[G]oto [D]efinition")
+					-- map("grD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+					-- map("gO", telescope.lsp_document_symbols, "Open Document Symbols")
+					-- map("gW", telescope.lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
+					-- map("grt", telescope.lsp_type_definitions, "[G]oto [T]ype Definition")
 					-- the following autocommands will enable showing references for items under the cursor
 					local client = vim.lsp.get_client_by_id(event.data.client_id)
 					if client and client:supports_method("textDocument/documentHighlight", event.buf) then
@@ -112,6 +112,7 @@ return {
 				"gopls",
 				"ansiblels",
 				"tailwindcss",
+				"templ",
 			})
 			require("mason-tool-installer").setup({ ensure_installed = ensure_installed })
 			require("mason-lspconfig").setup({
