@@ -18,6 +18,7 @@ alias python='python3' # default python to be used is python3 (ensure using brew
 alias pip='pip3' # default pip to be used is pip3 (ensure using brew pip)
 alias sfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app' # show all hidden files in finder
 alias vim='nvim' # making neovim the default editor
+alias cat='bat' # using bat as the default
 alias hfiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app' # hide all hidden files in finder
 alias zconf="vim ~/.zshrc" # easily edit the zshrc file
 alias smhud="/bin/launchctl setenv MTL_HUD_ENABLED 1" # show the metalhud in games
