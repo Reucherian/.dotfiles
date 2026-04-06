@@ -3,7 +3,7 @@ return {
 		-- sets sensible configurations for lsp
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ "mason.nvim", opts = {} },
+			{ "mason-org/mason.nvim", opts = {} },
 			"mason-org/mason-lspconfig.nvim",
 			"WhoIsSethDaniel/mason-tool-installer.nvim",
 			{ "j-hui/fidget.nvim", opts = {} },
