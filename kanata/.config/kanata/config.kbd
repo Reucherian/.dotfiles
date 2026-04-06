@@ -6,26 +6,51 @@
   )
 )
 
+(defvar
+  ;; Define all keys on the left side of the board
+  left-hand-keys (
+    1 2 3 4 5
+    q w e r t
+    g
+    z x c v b
+  )
+  ;; Define all keys on the right side of the board
+  right-hand-keys (
+    6 7 8 9 0
+    y u i o p
+    h
+    n m , . /
+  )
+)
+
 (defsrc
   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
-  caps ret
+  caps  a s d f j k l ; ret
   fn
 )
 
 (defalias
-  escctrl (tap-hold-press 200 200 esc lctl)
-  retctrl (tap-hold-press 200 200 ret lctl)
+  escctrl (tap-hold-release-keys 200 200 esc lctl $left-hand-keys)
+  retctrl (tap-hold-release-keys 200 200 ret lctl $right-hand-keys)
+  fkctl (tap-hold-release-keys 200 200 f lctl $left-hand-keys)
+  jkctl (tap-hold-release-keys 200 200 j rctl $right-hand-keys)
+  dksft (tap-hold-release-keys 200 200 d lsft $left-hand-keys)
+  kksft (tap-hold-release-keys 200 200 k rsft $right-hand-keys)
+  skalt (tap-hold-release-keys 200 200 s lalt $left-hand-keys)
+  lkalt (tap-hold-release-keys 200 200 l ralt $right-hand-keys)
+  akmet (tap-hold-release-keys 200 200 a lmet $left-hand-keys)
+  semet (tap-hold-release-keys 200 200 ; rmet $right-hand-keys)
   fnl (tap-hold-press 200 200 fn (layer-toggle fn))
 )
 
 (deflayer base
   brdn  brup  _    _    _    _   prev  pp  next  mute  vold  volu
-  @escctrl @retctrl
+  @escctrl  @akmet  @skalt  @dksft @fkctl @jkctl @kksft @lkalt @semet @retctrl
   @fnl
 )
 
 (deflayer fn
   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
-  @escctrl @retctrl
+  @escctrl  @akmet  @skalt  @dksft @fkctl @jkctl @kksft @lkalt @semet @retctrl
   fn
 )
