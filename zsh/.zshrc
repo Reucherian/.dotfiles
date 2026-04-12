@@ -58,6 +58,7 @@ eval "$(starship init zsh)" # for 🚀 starship
 export NODE_REPL_HISTORY="$XDG_STATE_HOME/node_repl_history"
 export NVM_DIR="$XDG_DATA_HOME/.nvm"
 export STEAMGUARD_CLI_MAFILES="$XDG_CONFIG_HOME/steamguard-cli/maFiles/"
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 bindkey -e # setting the EDITOR variable enables zsh viin mode in tmux
