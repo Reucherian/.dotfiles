@@ -8,6 +8,7 @@ return {
 		indent = { enabled = true },
 		input = { enabled = true },
 		notifier = { enabled = true },
+		lazygit = { configure = false },
 		picker = {
 			enabled = true,
 			sources = {
