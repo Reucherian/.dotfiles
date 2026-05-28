@@ -55,7 +55,7 @@ return {
 					end
 					-- enable toggle for inlay hints (toggle since it displaces code)
 					if client and client:supports_method("textDocument/inlayHint", event.buf) then
-						map("leader<th>", function()
+						map("<leader>th", function()
 							vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
 						end, "[T]oggle Inlay Hints")
 					end
