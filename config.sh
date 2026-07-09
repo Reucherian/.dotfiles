@@ -11,6 +11,7 @@ if [ -d $HOME/.dotfiles ]; then
     stow btop
     stow maven
     stow bat
+    stow opencode
 else
     echo "$HOME/.dotfiles does not exist.\n clone to the home folder instead"
 fi
