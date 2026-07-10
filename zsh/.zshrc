@@ -30,6 +30,7 @@ alias isync="~/Developer/Git/icloud_sync/icloud_sync.sh"
 alias csync="if [ -d $HOME/.dotfiles ]; then ~/.dotfiles/config.sh; else echo \"not configured\"; fi" # setting up the configuration on the system
 alias fhide="SetFile -a V" # makes a file hidden
 alias bat_rebuild="bat cache --build"
+alias opencode="./packages/opencode/dist/opencode-darwin-arm64/bin/opencode"
 function pages(){ osascript -e 'on run argv' -e 'set current_path to POSIX file ((POSIX path of item 1 of argv) & "/"&(item 2 of argv)&".pages") as string' -e 'tell application "Pages" to save (make new document) in file  current_path' -e 'end run' "$PWD" "$1";}; # apple script to open a pages file in the current path
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock # required for the 1p ssh agent
 export EDITOR="nvim" # setting default edit to neovim
