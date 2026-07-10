@@ -12,6 +12,7 @@ if [ -d $HOME/.dotfiles ]; then
     stow maven
     stow bat
     stow opencode
+    stow posting
 else
     echo "$HOME/.dotfiles does not exist.\n clone to the home folder instead"
 fi
