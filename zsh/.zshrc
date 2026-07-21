@@ -14,8 +14,6 @@ zinit light starship/starship
 zinit light zdharma-continuum/fast-syntax-highlighting # installing the fast syntax highlighting feature
 zinit light zsh-users/zsh-autosuggestions # install the auto suggestions feature
 eval "$(/opt/homebrew/bin/brew shellenv)" # required for 🍺 brew
-alias python='python3' # default python to be used is python3 (ensure using brew python)
-alias pip='pip3' # default pip to be used is pip3 (ensure using brew pip)
 alias sfiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app' # show all hidden files in finder
 alias vim='nvim' # making neovim the default editor
 alias cat='bat' # using bat as the default
@@ -30,7 +28,6 @@ alias isync="~/Developer/Git/icloud_sync/icloud_sync.sh"
 alias csync="if [ -d $HOME/.dotfiles ]; then ~/.dotfiles/config.sh; else echo \"not configured\"; fi" # setting up the configuration on the system
 alias fhide="SetFile -a V" # makes a file hidden
 alias bat_rebuild="bat cache --build"
-alias opencode="./packages/opencode/dist/opencode-darwin-arm64/bin/opencode"
 function pages(){ osascript -e 'on run argv' -e 'set current_path to POSIX file ((POSIX path of item 1 of argv) & "/"&(item 2 of argv)&".pages") as string' -e 'tell application "Pages" to save (make new document) in file  current_path' -e 'end run' "$PWD" "$1";}; # apple script to open a pages file in the current path
 export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock # required for the 1p ssh agent
 export EDITOR="nvim" # setting default edit to neovim
