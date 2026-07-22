@@ -17,7 +17,7 @@ PLIST_DIR="/Library/LaunchDaemons"
 # 1. Fetch & install latest Karabiner DriverKit pkg
 echo "Fetching latest Karabiner DriverKit pkg URL..."
 DRIVERKIT_PKG_URL=$(
-    curl -s "https://api.github.com/repos/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice/releases/latest" |
+    curl -s "https://api.github.com/repos/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice/releases/246802998" |
         jq -r '.assets[] | select(.name|endswith(".pkg")) | .browser_download_url'
 )
 echo "Downloading DriverKit from: $DRIVERKIT_PKG_URL"
