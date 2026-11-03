@@ -1,4 +1,3 @@
-PROMPT='%{%F{white}%B%}%n%{%f%b%}@%{%F{blue}%B%}%m%{%f%b%} %1~ %# ' # 🌈 prompt customization
 export XDG_CONFIG_HOME="$HOME/.config" # using the XDG standard to keep home directory clean
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_DATA_HOME="$HOME/.local/share"
