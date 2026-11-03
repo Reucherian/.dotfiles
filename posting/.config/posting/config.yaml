@@ -1,2 +1,4 @@
 theme: catppuccin-mocha-mauve
 editor: nvim
+keymap:
+    open-in-editor: ctrl+e

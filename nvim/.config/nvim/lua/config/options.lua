@@ -32,6 +32,7 @@ vim.opt.cursorline = true -- enable highlighting of the current line
 vim.o.foldmethod = "expr" -- use the expression for folding
 vim.o.foldexpr = "v:lua.vim.treesitter.foldexpr()" -- executed for every line in a buffer
 vim.o.foldlevelstart = 99 -- no folds at the beginning
+vim.o.foldenable = true
 vim.o.foldtext = ""
 vim.opt.smoothscroll = true
 vim.opt.statuscolumn = [[%!v:lua.require'snacks.statuscolumn'.get()]]
