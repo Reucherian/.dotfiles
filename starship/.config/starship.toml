@@ -4,16 +4,11 @@ format = """${custom.arch}$directory$character"""
 palette = "catppuccin_mocha"
 # move the rest of the prompt to the right
 # Keep this lean: avoid scanning every module on every prompt.
-right_format = """$status$cmd_duration$python$git"""
+right_format = """$all"""
 command_timeout = 1500
 
 [python]
 symbol = '[ ](green)'
-pyenv_version_name = false
-detect_extensions = ["py"]
-detect_files = ["pyproject.toml", "requirements.txt", ".python-version", "Pipfile", "poetry.lock", "tox.ini"]
-detect_folders = []
-format = 'via [$symbol$version]($style) '
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
